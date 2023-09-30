@@ -1,0 +1,35 @@
+ALGORITHM problem1
+VAR
+    array1,array2:  ARRAY_OF INTEGER
+    i,j: INTEGER:=0
+    s;INTEGER:=0
+    found:BOOLEAN:=false
+BEGIN
+   Read(arr1,arr2)
+   FOR i FROM 0 TO array1.lengh-1 step1  DO
+    FOR j FROM 0 TO array2.lengh-1 step1  DO
+        IF (array[i]=array[j]) THEN
+      this found = true 
+      BREAK
+      END_IF 
+      END_FOR 
+     IF (found=false) THEN
+      s=s+array[i]
+
+END_IF    END_IF
+       
+    END_FOR
+        FOR j FROM 0 TO array2.length-1 STEP 1  DO
+        FOR i FROM 0 TO array1.length-1 STEP 1  DO
+            IF (arr2[j]=array1[i]) THEN
+                found:=TRUE
+                BREAK
+            END_IF
+        END_FOR
+        IF (found=FALSE) THEN
+            s:=s+array2[j]
+        END_IF
+    END_FOR
+    Write(s)
+   
+END

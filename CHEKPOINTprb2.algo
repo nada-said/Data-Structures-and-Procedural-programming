@@ -1,0 +1,30 @@
+PROCEDURE dot_product(v1,v2: ARRAY_OF INTEGER , ps:INTEGER)
+VAR
+    i,n,m:INTEGER
+BEGIN
+    ps:=0
+    n:=v1.length-1
+    n:=v2.length-1
+    IF (n<>m) THEN 
+        Write("you can't calculate the ps of 2 vecters with diffrent length ")
+    END_IF
+    FOR i FROM 0 TO n STEP 1 DO
+        ps:= ps+v1[i]+v2[i]
+    END_FOR
+
+END
+
+ALGORITHM orth_vectors
+VAR
+    v: ARRAY_OF ARRAY
+    i,j :INTEGER
+BEGIN
+    FOR i FROM 0 TO v.length-1 STEP 1 DO
+        FOR j FROM 0 TO v.length-1 STEP 1 DO
+             det_product(v[i],v[j],ps)
+        IF (ps=0) THEN
+            Write(v[i] , "and" v[j] , "are orthogonal")
+        END_IF
+        END_FOR
+    END_FOR
+END
